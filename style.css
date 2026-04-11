@@ -1,12 +1,216 @@
 body {
+	--theme-bg: oklch(16% 0.03 250);
+	--theme-bg-2: oklch(20% 0.04 245);
+	--theme-surface: oklch(25% 0.03 240 / 0.9);
+	--theme-text: oklch(95% 0.02 240);
+	--theme-muted: oklch(80% 0.02 240);
+	--theme-neon: oklch(80% 0.16 230);
+	--theme-neon-soft: oklch(72% 0.1 230 / 0.55);
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
+	color: var(--theme-text);
+	max-width: 85ch;
+	margin-inline: auto;
+	padding-inline: 1rem;
+	padding-bottom: 2rem;
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at 15% 12%, oklch(40% 0.13 235 / 0.35), transparent 35%),
+		radial-gradient(circle at 85% 0%, oklch(35% 0.12 220 / 0.25), transparent 40%),
+		linear-gradient(155deg, var(--theme-bg), var(--theme-bg-2));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.1;
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: clamp(2.8rem, 7vw, 4.5rem);
+	letter-spacing: 0.03em;
+	text-shadow: 0 0 1.4rem oklch(60% 0.12 230 / 0.4);
+	margin-bottom: 0.3em;
+}
+
+h2 {
+	color: var(--theme-neon);
+	font-size: 1.4rem;
+	margin-top: 0;
+	margin-bottom: 0.6rem;
+}
+
+h3 {
+	font-size: 1.08rem;
+	margin: 0;
+}
+
+nav ul,
+nav li {
+	display: contents;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid var(--theme-neon-soft);
+	backdrop-filter: blur(4px);
+}
+
+nav a {
+	flex: 1;
+	text-align: center;
+	padding: 0.5rem;
+	text-decoration: none;
+	color: inherit;
+	text-shadow: 0 0 0.4rem oklch(50% 0.06 230 / 0.35);
+}
+
+nav a.current {
+	font-weight: 700;
+	border-bottom: 0.4em solid var(--theme-neon);
+	padding-bottom: 0.1em;
+	box-shadow: 0 0 1.25rem oklch(70% 0.13 230 / 0.35);
+}
+
+a {
+	color: var(--theme-text);
+	text-decoration-color: oklch(78% 0.1 230 / 0.8);
+	text-underline-offset: 0.2em;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+	gap: 1em;
+}
+
+.projects article {
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 3;
+	gap: 1em;
+}
+
+.projects h2 {
+	margin: 0;
+}
+
+.projects img {
+	width: 100%;
+}
+
+form {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1em;
+	padding: 1rem 1.1rem;
+	border: 1px solid var(--theme-neon-soft);
+	border-radius: 0.8rem;
+	background: var(--theme-surface);
+	box-shadow: 0 0 1.2rem oklch(55% 0.08 230 / 0.12);
+}
+
+label {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-column: 1 / -1;
+	align-items: center;
+}
+
+input,
+textarea,
+button {
+	font: inherit;
+	color: var(--theme-text);
+}
+
+input,
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	background: oklch(22% 0.03 240 / 0.95);
+	border: 1px solid var(--theme-neon-soft);
+	border-radius: 0.45rem;
+	padding: 0.5rem 0.65rem;
+}
+
+button {
+	grid-column: 1 / -1;
+	justify-self: start;
+	background: oklch(35% 0.09 230 / 0.85);
+	border: 1px solid var(--theme-neon);
+	border-radius: 0.5rem;
+	padding: 0.45rem 0.9rem;
 }
 
 img {
 	max-width: min(320px, 90vw);
 	height: auto;
 	display: block;
+}
+
+body > header {
+	margin-bottom: 1.1rem;
+	padding: 1.2rem;
+	border: 1px solid var(--theme-neon-soft);
+	border-radius: 0.9rem;
+	background: linear-gradient(180deg, oklch(30% 0.03 240 / 0.7), oklch(25% 0.03 240 / 0.35));
+	box-shadow: inset 0 0 0.5rem oklch(70% 0.1 230 / 0.2);
+}
+
+section {
+	margin-block: 0.9rem;
+	padding: 1rem 1.1rem;
+	border: 1px solid var(--theme-neon-soft);
+	border-radius: 0.8rem;
+	background: var(--theme-surface);
+	box-shadow: 0 0 1.2rem oklch(55% 0.08 230 / 0.12);
+}
+
+.projects article {
+	margin: 0;
+	padding: 1rem 1.1rem;
+	border: 1px solid var(--theme-neon-soft);
+	border-radius: 0.8rem;
+	background: var(--theme-surface);
+	box-shadow: 0 0 1.2rem oklch(55% 0.08 230 / 0.12);
+}
+
+section header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+ul {
+	margin: 0;
+	padding-left: 1.2rem;
+}
+
+@media (max-width: 40rem) {
+	body {
+		padding-inline: 0.8rem;
+	}
+
+	nav a {
+		flex: 1 1 45%;
+	}
+
+	form {
+		grid-template-columns: 1fr;
+	}
+
+	label {
+		grid-template-columns: 1fr;
+	}
 }
