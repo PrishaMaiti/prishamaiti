@@ -93,3 +93,54 @@ form?.addEventListener('submit', function (event) {
   let url = `${form.action}?${params.join('&')}`;
   location.href = url;
 });
+
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    console.log(response);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!(containerElement instanceof Element)) {
+    console.error('renderProjects: containerElement is invalid.');
+    return;
+  }
+
+  containerElement.innerHTML = '';
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects found.</p>';
+    return;
+  }
+
+  const validHeadingLevel = /^h[1-6]$/i.test(headingLevel)
+    ? headingLevel.toLowerCase()
+    : 'h2';
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+
+    const title = project?.title || 'Untitled project';
+    const image = project?.image || 'https://vis-society.github.io/labs/2/images/empty.svg';
+    const description = project?.description || 'No description provided.';
+
+    article.innerHTML = `
+      <${validHeadingLevel}>${title}</${validHeadingLevel}>
+      <img src="${image}" alt="${project?.alt || title}">
+      <p>${description}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
