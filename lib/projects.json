@@ -1,22 +1,74 @@
 [
     {
         "title": "The Culinary Guide to Popularity",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Data storytelling project focused on trend exploration and clear communication of insights."
     },
     {
         "title": "ClassGraph",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Web application for exploring course relationships and helping students make better planning decisions."
     },
     {
-        "title": "Portfolio Website",
+        "title": "Brandify AI",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Personal site built with semantic HTML and CSS to showcase projects, resume details, and contact info."
+        "description": "AI powered personal brand-building coaching platform"
     },
     {
         "title": "Analytics Case Study",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Practice analysis pipeline using data cleaning, exploratory statistics, and actionable recommendations."
+    },
+    {
+        "title": "Campus Events Dashboard",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Interactive dashboard summarizing campus event attendance, timing, and engagement trends."
+    },
+    {
+        "title": "Climate Data Explorer",
+        "year": "2021",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Exploratory analysis of long-term climate patterns with simple charts and annotated takeaways."
+    },
+    {
+        "title": "Recipe Recommender",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Prototype recommendation interface for suggesting recipes based on available ingredients."
+    },
+    {
+        "title": "Student Survey Analyzer",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Survey analysis project that cleaned responses and turned them into summary insights and visuals."
+    },
+    {
+        "title": "Travel Budget Planner",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Budgeting tool concept for tracking trip costs, categories, and savings goals over time."
+    },
+    {
+        "title": "Accessibility Audit Report",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "UI review project that documented accessibility issues and proposed concrete improvements."
+    },
+    {
+        "title": "Market Trend Notebook",
+        "year": "2021",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Notebook-based analysis exploring seasonal market patterns and descriptive statistics."
+    },
+    {
+        "title": "Community Impact Story",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Narrative project combining data and visuals to explain local community outcomes."
     }
 ]
