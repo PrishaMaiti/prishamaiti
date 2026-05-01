@@ -138,6 +138,16 @@ a {
 	width: 100%;
 }
 
+.project-details p {
+	margin: 0;
+}
+
+.project-year {
+	margin-top: 0.35rem;
+	font-size: 0.9rem;
+	color: color-mix(in oklch, var(--theme-text) 70%, var(--theme-bg));
+}
+
 form {
 	display: grid;
 	grid-template-columns: auto 1fr;

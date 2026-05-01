@@ -138,11 +138,15 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     const title = project?.title || 'Untitled project';
     const image = project?.image || 'https://vis-society.github.io/labs/2/images/empty.svg';
     const description = project?.description || 'No description provided.';
+    const year = project?.year || 'Year unknown';
 
     article.innerHTML = `
       <${validHeadingLevel}>${title}</${validHeadingLevel}>
       <img src="${image}" alt="${project?.alt || title}">
-      <p>${description}</p>
+      <div class="project-details">
+        <p>${description}</p>
+        <p class="project-year">Year: ${year}</p>
+      </div>
     `;
 
     containerElement.appendChild(article);
