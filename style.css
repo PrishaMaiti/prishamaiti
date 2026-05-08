@@ -259,6 +259,28 @@ ul {
 	padding-left: 1.2rem;
 }
 
+.stats {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.5rem 1rem;
+	margin: 0;
+}
+
+.stats dt {
+	font-weight: 600;
+	color: var(--theme-neon);
+}
+
+.stats dd {
+	margin: 0;
+}
+
+.gridlines {
+	stroke: var(--theme-muted);
+	opacity: 0.2;
+	stroke-dasharray: 2, 4;
+}
+
 @media (max-width: 40rem) {
 	body {
 		padding-inline: 0.8rem;
